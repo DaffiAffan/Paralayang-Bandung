@@ -1,24 +1,28 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center header-transparent">
-      <div class="container d-flex justify-content-between align-items-center">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+          <a class="navbar-brand" href="/"><strong>Paralayang Bandung </strong></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
 
-          <div>
-              <a href="/">
-                  <h3 style="color:white;">Paralayang Bandung</h3>
-              </a>
-              {{-- <a href="/"><img src="assets/img/logo.png" alt=""></a> --}}
-              <!-- Uncomment below if you prefer to use a text logo -->
-              <!--<h1><a href="index.html">Regna</a></h1>-->
-          </div>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
 
-          <nav id="navbar" class="navbar">
-              <ul>
-                  <li><a class="nav-link scrollto" href="/about">Tentang Kami</a></li>
-                  <li><a class="nav-link scrollto" href="/gallery">Galeri</a></li>
-                  <li><a class="nav-link scrollto " href="tandem">Tandem</a></li>
-                  <li><a class="nav-link scrollto" href="/contact">Kontak</a></li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="gallery">Galeri</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="tandem">Tandem</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="contact">contact</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="about"> </a>
+                  </li>
               </ul>
-              <i class="bi bi-list mobile-nav-toggle"></i>
-          </nav><!-- .navbar -->
-      </div>
+          </div>
+      </nav>
   </header><!-- End Header -->
