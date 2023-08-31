@@ -18,12 +18,16 @@ class VisitorsController extends Controller
     {
         return view('visitors.gallery', []);
     }
-    public function tandem()
-    {
-        return view('visitors.tandem', []);
-    }
     public function contact()
     {
         return view('visitors.contact', []);
+    }
+    public function cililin()
+    {
+        return view('visitors.cililinTandem', []);
+    }
+    public function ciater()
+    {
+        return view('visitors.ciaterTandem', []);
     }
 }

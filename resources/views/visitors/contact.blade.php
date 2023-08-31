@@ -20,7 +20,7 @@
                               <div class="col-lg-6">
                                   <div class="contact-wrap w-100 p-md-5 p-4">
                                       <h3>Kontak Kami</h3>
-                                      <p class="mb-4">We're open for any suggestion or just to have a chat</p>
+                                      {{-- <p class="mb-4">We're open for any suggestion or just to have a chat</p> --}}
                                       <div id="form-message-warning" class="mb-4"></div>
 
                                       <div class="row mb-4">
@@ -44,47 +44,52 @@
                                       </div>
 
 
+                                      @if (session()->has('berhasil'))
+                                          <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                              {{ session('berhasil') }}
+                                              <button type="button" class="btn-close" data-bs-dismiss="alert"
+                                                  aria-label="Close"></button>
+                                          </div>
+                                      @endif
 
 
 
-
-                                      <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                      <form action="/contacts" method="POST" class="contactForm">
+                                          @csrf
                                           <div class="row">
                                               <div class="col-md-12">
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" name="name"
-                                                          id="name" placeholder="Name">
+                                                      <input class="form-control @error('name') is-invalid @enderror"
+                                                          id=" name" name="name" type="text" required
+                                                          placeholder="Nama" value="{{ old('name') }}" />
+                                                  </div>
+                                              </div>
+
+                                              <div class="col-md-12">
+                                                  <div class="form-group">
+                                                      <input class="form-control @error('email') is-invalid @enderror"
+                                                          id=" email" name="email" type="email" required
+                                                          placeholder="Email" value="{{ old('email') }}" />
                                                   </div>
                                               </div>
                                               <div class="col-md-12">
                                                   <div class="form-group">
-                                                      <input type="email" class="form-control" name="email"
-                                                          id="email" placeholder="Email">
+                                                      <input
+                                                          class="form-control @error('phone_number') is-invalid @enderror"
+                                                          id=" phone_number" name="phone_number" type="tel" required
+                                                          placeholder="Nomor Telepon" value="{{ old('phone_number') }}" />
                                                   </div>
                                               </div>
                                               <div class="col-md-12">
                                                   <div class="form-group">
-                                                      <input type="text" class="form-control" name="number"
-                                                          id="number" placeholder="Phone numbers">
+                                                      <textarea class="form-control @error('description') is-invalid @enderror" value="{{ old('description') }}"
+                                                          id=" description" name="description" type="text" cols="30" rows="4"
+                                                          placeholder="Pesan yang ini disampaikan"></textarea>
                                                   </div>
                                               </div>
                                               <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <input type="text" class="form-control" name="subject"
-                                                          id="subject" placeholder="Subject">
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <textarea name="message" class="form-control" id="message" cols="30" rows="4"
-                                                          placeholder="Create a message here"></textarea>
-                                                  </div>
-                                              </div>
-                                              <div class="col-md-12">
-                                                  <div class="form-group">
-                                                      <input type="submit" value="Send Message" class="btn btn-primary">
-                                                      <div class="submitting"></div>
-                                                  </div>
+                                                  <div class="d-grid"><button class="w-100 btn btn-lg btn-primary"
+                                                          type="submit">Kirim</button></div>
                                               </div>
                                           </div>
                                       </form>

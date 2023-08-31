@@ -8,7 +8,7 @@
 
                   <div class="col-inner text-center">
                       <div class="text">
-                          <h3>Galleri Foto</h3>
+                          <h3>Galeri Foto</h3>
                       </div>
                       <br>
                       <br>

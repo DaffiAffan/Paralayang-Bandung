@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VisitorsController;
 
@@ -19,9 +20,11 @@ use App\Http\Controllers\VisitorsController;
 Route::get('/', [VisitorsController::class, 'home']);
 Route::get('/about', [VisitorsController::class, 'about']);
 Route::get('/gallery', [VisitorsController::class, 'gallery']);
-Route::get('/tandem', [VisitorsController::class, 'tandem']);
 Route::get('/contact', [VisitorsController::class, 'contact']);
+Route::get('/ciater', [VisitorsController::class, 'ciater']);
+Route::get('/cililin', [VisitorsController::class, 'cililin']);
 
+Route::post('/contacts', [ContactController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -55,7 +55,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #2dc997;
+  background: rgba(52, 59, 64, 0.9);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -69,7 +69,7 @@ h6 {
 }
 
 .back-to-top:hover {
-  background: #49d6a9;
+  background: rgba(52, 59, 64, 0.9);
   color: #fff;
 }
 
@@ -1169,6 +1169,7 @@ section {
     background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;
     background-size: cover;
 } */
+
 
 .navbar {
     background-color: transparent;
